@@ -22,16 +22,16 @@ class UserService {
       .catch(error => console.error(error));
   };
 
-  updateUser = (id, name, birthdate) => {
+  updateUser = (id, name, points) => {
     return this.instance
-      .put(`/users/edit/${id}`, { name, birthdate })
+      .put(`/users/edit/${id}`, { name, points })
       .then(res => Promise.resolve(res.data))
       .catch(error => console.error(error));
   };
 
-  newUser = (name, birthdate) => {
+  newUser = (name, points) => {
     return this.instance
-      .post(`/users/new`, { name, birthdate })
+      .post(`/users/new`, { name, points })
       .then(res => Promise.resolve(res.data))
       .catch(error => console.error(error));
   };

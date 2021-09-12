@@ -10,8 +10,7 @@ export default class SignUp extends Component {
   state = {
     username: "",
     password: "",
-    name: "",
-    birthdate: ""
+    name: ""
   };
 
   handleChange = e => {
@@ -34,41 +33,14 @@ export default class SignUp extends Component {
   };
 
   render() {
-    const { username, password, name, birthdate } = this.state;
-
-    //Multi-language
-    let text1;
-    let text2;
-    let text3;
-    let text4;
-    let text5;
-    let text6;
-    let text7;
-
-    if (this.props.lang === true) {
-      text1 = "SIGNUP";
-      text2 = "Username";
-      text3 = "Password";
-      text4 = "Name";
-      text5 = "Password > 4 chracters";
-      text6 = "Name up to 10 characters";
-      text7 = "Birthdate";
-    } else {
-      text1 = "REGISTRO";
-      text2 = "Nombre de usuario";
-      text3 = "Contraseña";
-      text4 = "Nombre";
-      text5 = "Contraseña mayor de 4 caracteres";
-      text6 = "Nombre de hasta 10 letras";
-      text7 = "Fecha de nacimiento";
-    }
+    const { username, password, name } = this.state;
 
     return (
       <div className="signup-container">
-        <h1 className="signup-title">{text1}</h1>
+        <h1 className="signup-title">Signup</h1>
         <form className="signup-form" onSubmit={this.handleSignUp}>
           <div className="signup-param">
-            <label>{text2} </label>
+            <label>Nombre de usuario </label>
             <input
               className="signup-field"
               type="text"
@@ -76,11 +48,11 @@ export default class SignUp extends Component {
               value={username}
               required
               onChange={this.handleChange}
-              placeholder={text2}
+              placeholder="username"
             />
           </div>
           <div className="signup-param">
-            <label>{text3} </label>
+            <label>Password </label>
             <input
               className="signup-field"
               type="password"
@@ -89,11 +61,11 @@ export default class SignUp extends Component {
               name="password"
               required
               onChange={this.handleChange}
-              placeholder={text5}
+              placeholder="contraseña"
             />
           </div>
           <div className="signup-param">
-            <label>{text4} </label>
+            <label>Nombre </label>
             <input
               className="signup-field"
               type="text"
@@ -102,22 +74,10 @@ export default class SignUp extends Component {
               name="name"
               required
               onChange={this.handleChange}
-              placeholder={text6}
+              placeholder="nombre"
             />
           </div>
-          <div className="signup-param">
-            <label>{text7} </label>
-            <input
-              className="signup-field"
-              type="date"
-              value={birthdate}
-              pattern="20\d{2}(-|\/)((0[1-9])|(1[0-2]))(-|\/)((0[1-9])|([1-2][0-9])|(3[0-1]))(T|\s)(([0-1][0-9])|(2[0-3])):([0-5][0-9]):([0-5][0-9])"
-              name="birthdate"
-              required
-              onChange={this.handleChange}
-            />
-          </div>
-          <input className="submit-button" type="submit" value={text1} />
+          <input className="submit-button" type="submit" value="Enviar" />
         </form>
       </div>
     );

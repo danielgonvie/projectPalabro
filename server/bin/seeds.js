@@ -19,87 +19,29 @@ mongoose
 
 let users = [
   {
-    name: "Daniel",
-    birthdate: "1994-08-21",
-    username: "daniel",
-    password: bcrypt.hashSync("daniel", bcrypt.genSaltSync(bcryptSalt))
+    name: "Ductor",
+    username: "ductor",
+    password: bcrypt.hashSync("ductor", bcrypt.genSaltSync(bcryptSalt)),
+    points: 1000
   },
   {
-    name: "María",
-    birthdate: "1989-01-16",
-    username: "maria",
-    password: bcrypt.hashSync("maria", bcrypt.genSaltSync(bcryptSalt))
+    name: "El pepe",
+    username: "pepe",
+    password: bcrypt.hashSync("pepe", bcrypt.genSaltSync(bcryptSalt)),
+    points: 500
   },
   {
-    name: "Fran",
-    birthdate: "1988-04-28",
-    username: "fran",
-    password: bcrypt.hashSync("fran", bcrypt.genSaltSync(bcryptSalt))
+    name: "Cheems",
+    username: "cheems",
+    password: bcrypt.hashSync("cheems", bcrypt.genSaltSync(bcryptSalt)),
+    points: 100
   },
   {
-    name: "Enrique",
-    birthdate: "1988-09-24",
-    username: "enrique",
-    password: bcrypt.hashSync("enrique", bcrypt.genSaltSync(bcryptSalt))
-  },
-  {
-    name: "Rick",
-    birthdate: "1970-11-24",
-    username: "rick",
-    password: bcrypt.hashSync("rick", bcrypt.genSaltSync(bcryptSalt))
-  },
-  {
-    name: "Paula",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Jesús",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Paco",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Luis",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Marcos",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Aida",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Estefanía",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Esther",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Miguel",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Carmen",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Lorena",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Manuel",
-    birthdate: "1970-11-24"
-  },
-  {
-    name: "Jacinto",
-    birthdate: "1970-11-24"
-  }
+    name: "Cookie",
+    username: "cookie",
+    password: bcrypt.hashSync("cookie", bcrypt.genSaltSync(bcryptSalt)),
+    points: 0
+  }  
 ];
 
 User.deleteMany()

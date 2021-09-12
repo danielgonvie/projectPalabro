@@ -27,9 +27,9 @@ router.get("/:id", (req, res, next) => {
 //Edit a especific user
 router.put("/edit/:id", (req, res, next) => {
   const name = req.body.name;
-  const birthdate = req.body.birthdate;
+  const points = req.body.points;
 
-  User.findOneAndUpdate(req.params.id, { name: name, birthdate: birthdate })
+  User.findOneAndUpdate(req.params.id, { name: name, points: points })
     .then(user => {
       User.findById(user._id).then(user => {
         res.status(200).json(user);
@@ -43,7 +43,7 @@ router.put("/edit/:id", (req, res, next) => {
 router.post("/new", (req, res, next) => {
   User.create({
     name: req.body.name,
-    birthdate: req.body.birthdate
+    points: req.body.points
   })
     .then(user => {
       console.log("User has been created successfully");

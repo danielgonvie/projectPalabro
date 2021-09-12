@@ -31,9 +31,9 @@ router.post("/login", (req, res, next) => {
 });
 
 router.post("/signup", (req, res, next) => {
-  const { username, password, name, birthdate } = req.body;
+  const { username, password, name} = req.body;
 
-  if (!username || !password || !name || !birthdate) {
+  if (!username || !password || !name ) {
     res.status(400).json({ message: "All fields must be filled!" });
     return;
   }
@@ -62,8 +62,7 @@ router.post("/signup", (req, res, next) => {
     const newUser = new User({
       username,
       password: hashPass,
-      name,
-      birthdate
+      name
     });
 
     newUser.save(err => {
