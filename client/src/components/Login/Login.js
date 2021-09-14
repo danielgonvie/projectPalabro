@@ -34,27 +34,13 @@ export default class Login extends Component {
 
   render() {
     const { username, password } = this.state;
-    //Multi-language
-    let text1;
-    let text2;
-    let text3;
-
-    if (this.props.lang === true) {
-      text1 = "Username";
-      text2 = "Password";
-      text3 = "LOGIN";
-    } else {
-      text1 = "Nombre de usuario";
-      text2 = "Contraseña";
-      text3 = "ACCESO";
-    }
 
     return (
       <div className="login-container">
-        <h1 className="login-title">{text3}</h1>
+        <h1 className="login-title">Login</h1>
         <form className="login-form" onSubmit={this.handleLogin}>
           <div className="login-param">
-            <label>{text1}</label>
+            <label>Username</label>
             <input
               className="login-field"
               type="text"
@@ -62,11 +48,11 @@ export default class Login extends Component {
               value={username}
               onChange={this.handleChange}
               required
-              placeholder={text1}
+              placeholder="Username"
             />
           </div>
           <div className="login-param">
-            <label>{text2}</label>
+            <label>Password</label>
             <input
               className="login-field"
               type="password"
@@ -74,10 +60,10 @@ export default class Login extends Component {
               value={password}
               onChange={this.handleChange}
               required
-              placeholder={text2}
+              placeholder="Password"
             />
           </div>
-          <input className="submit-button" type="submit" value={text3} />
+          <input className="submit-button" type="submit" value="Login" />
         </form>
       </div>
     );

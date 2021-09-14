@@ -40,7 +40,7 @@ export default class SignUp extends Component {
         <h1 className="signup-title">Signup</h1>
         <form className="signup-form" onSubmit={this.handleSignUp}>
           <div className="signup-param">
-            <label>Nombre de usuario </label>
+            <label>Username </label>
             <input
               className="signup-field"
               type="text"
@@ -52,7 +52,7 @@ export default class SignUp extends Component {
             />
           </div>
           <div className="signup-param">
-            <label>Password </label>
+            <label>Name </label>
             <input
               className="signup-field"
               type="password"

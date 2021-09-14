@@ -1,0 +1,175 @@
+.main-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 700px;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.main-player{
+    position:absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+    background-image: url("https://img2.freepng.es/20180403/rfw/kisspng-dogecoin-cryptocurrency-digital-currency-doge-5ac3a787122c26.7280659415227718470745.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 50s linear infinite;
+    -moz-animation: rotating 50s linear infinite;
+    -ms-animation: rotating 50s linear infinite;
+    -o-animation: rotating 50s linear infinite;
+    animation: rotating 50s linear infinite;
+  }
+
+  .faster-rotating {
+    -webkit-animation: rotating 10s linear infinite;
+    -moz-animation: rotating 10s linear infinite;
+    -ms-animation: rotating 10s linear infinite;
+    -o-animation: rotating 10s linear infinite;
+    animation: rotating 10s linear infinite;
+  }
+
+  .counter {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      user-select: none;
+  }
+
+  .dollar-counter {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    user-select: none;
+}
+
+  .playerChildren {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url("https://images-na.ssl-images-amazon.com/images/I/813CdCrdOiL.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-radius: 50%;
+      transform: scale(0.1);
+      transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
+      cursor: pointer;
+  }
+
+  .playerExtra {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url("http://assets.stickpng.com/images/5845e665fb0b0755fa99d7ec.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    transform: scale(0.1);
+    transition: all 1s cubic-bezier(0, 0.55, 0.45, 1);
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 5px #cfb937;
+}
+
+
+.store{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 700px;
+    background-color: rgba(55, 146, 158, 0.425);
+}
+
+.store-options{
+    width: 100%;
+}
+
+.option{
+    position: relative;
+    width:100%;
+    height: 100px;
+    background-color:rgba(90, 234, 253, 0.425);
+    display: flex;
+    margin: 0px 0px 16px 0px;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.option-specs{
+    display:flex;
+    flex-direction: column;
+}
+
+.option-price{
+    display:flex;
+    flex-direction: column;
+}
+
+.layout{
+    display:flex;
+}
+
+.option-title{
+    font-size: 24px;
+}
+
+.option-desc{
+    font-size: 16px;
+}
+
+.disabled-div{
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.568);
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}

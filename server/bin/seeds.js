@@ -22,25 +22,29 @@ let users = [
     name: "Ductor",
     username: "ductor",
     password: bcrypt.hashSync("ductor", bcrypt.genSaltSync(bcryptSalt)),
-    points: 1000
+    points: 1000,
+    items: []
   },
   {
     name: "El pepe",
     username: "pepe",
     password: bcrypt.hashSync("pepe", bcrypt.genSaltSync(bcryptSalt)),
-    points: 500
+    points: 500,
+    items: []
   },
   {
     name: "Cheems",
     username: "cheems",
     password: bcrypt.hashSync("cheems", bcrypt.genSaltSync(bcryptSalt)),
-    points: 100
+    points: 100,
+    items: []
   },
   {
     name: "Cookie",
     username: "cookie",
     password: bcrypt.hashSync("cookie", bcrypt.genSaltSync(bcryptSalt)),
-    points: 0
+    points: 0,
+    items: []
   }  
 ];
 
