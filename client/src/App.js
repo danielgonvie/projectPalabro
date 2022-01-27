@@ -9,6 +9,7 @@ import MainBar from "./components/MainBar/MainBar";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
+import MainGame from "./components/MainGame/MainGame";
 
 export default class App extends Component {
   constructor(props) {
@@ -73,7 +74,7 @@ export default class App extends Component {
     );
 
     return (
-      <div>
+      <div className="fullscreen">
         {user && (
           <Switch>
             <Route
@@ -82,7 +83,7 @@ export default class App extends Component {
               render={match => (
                 <React.Fragment>
                   <MainBar {...match} user={user} logout={this.handleLogout}></MainBar>
-                  
+                  <MainGame {...match} user={user}></MainGame>
                 </React.Fragment>
               )}
             />
@@ -107,6 +108,7 @@ export default class App extends Component {
               render={match => (
                 <React.Fragment>
                   Home No User
+                  <Login {...match} setUser={this.setUser}/>
                 </React.Fragment>
               )}
             />
