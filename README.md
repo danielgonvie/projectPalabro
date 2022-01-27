@@ -4,7 +4,7 @@ Don't forget to add a .env file with these params:
 - PORT=3001
 - ENV=development
 - REACT_APP_WEB_URL=http://localhost:3000
-- DBURL='mongodb://localhost/coockie'
+- DBURL='mongodb://localhost/boilerplate'
 
 
 Don't forget to add a .env file with these params:

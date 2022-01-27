@@ -6,7 +6,6 @@ import AuthService from "./services/AuthService";
 import Login from "./components/Login/Login";
 import SignUp from "./components/Signup/Signup";
 import MainBar from "./components/MainBar/MainBar";
-import GameComponent from "./components/GameComponent/GameComponent";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
@@ -83,7 +82,7 @@ export default class App extends Component {
               render={match => (
                 <React.Fragment>
                   <MainBar {...match} user={user} logout={this.handleLogout}></MainBar>
-                  <GameComponent {...match} user={user}></GameComponent>
+                  
                 </React.Fragment>
               )}
             />
@@ -92,6 +91,7 @@ export default class App extends Component {
               path="/users/:id"
               render={match => (
                 <React.Fragment>
+                  <MainBar {...match} user={user} logout={this.handleLogout}></MainBar>
                 </React.Fragment>
               )}
             />
