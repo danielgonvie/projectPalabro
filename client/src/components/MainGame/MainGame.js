@@ -6,7 +6,7 @@ export default class MainGame extends Component {
     super(props)
     this.state = {
       user: this.props.user,
-      currentWord: "cinta",
+      currentWord: "CARCA",
       attemps: 6,
       userRows: [...Array(6).fill([])],
       userAnswer:"",
@@ -88,17 +88,21 @@ export default class MainGame extends Component {
     let splitWord = this.state.currentWord.split('');
     let cloneArr = userArr;
     for (let i = 0; i < userArr.length; i++) {
+      console.log(splitWord, "--------------------------------");
         if (splitWord.some(element => element == userArr[i])) {
+          console.log("--------------------------------");
             if(cloneArr[i] == splitWord[i]){
                 let count = 0;
                 for (let j = 0; j < cloneArr.length; j++) {
-                    if (cloneArr[j] === cloneArr[i]) {
+                    if (cloneArr[i] === splitWord[j]) {
                         count++;
+                        console.log(count, "veces que encontró la letra");
+                        console.log(cloneArr[j], splitWord[i], "que compara");
                     }
                 }
                 
                 if(count > 1){
-                    cloneArr[i] = {letter: cloneArr[i], color: "azul"}
+                    cloneArr[i] = {letter: cloneArr[i], color: "blue"}
                 } else {
                     cloneArr[i] = {letter: cloneArr[i], color: "green"}
                 }
