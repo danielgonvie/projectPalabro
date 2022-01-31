@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./MainGame.scss";
+import { dictionary } from './dictionary.js'
 
 export default class MainGame extends Component {
   constructor(props) {
@@ -10,9 +11,15 @@ export default class MainGame extends Component {
       attemps: 6,
       userRows: [...Array(6).fill([])],
       userAnswer:"",
-      currentAttemp: 0
+      currentAttemp: 0,
+      newArr: []
     };
   }
+
+  componentDidMount() {
+    console.log("se armó")
+ }
+
 
   playerClicked = () => {
 
